@@ -1,0 +1,156 @@
+---
+import Page from '@/layouts/page.astro';
+---
+
+<Page title='Container' description='Container exemples'>
+  <div class='pb-5'>
+    <div class='g-container'>
+      <h3>Exemplu</h3>
+
+      <div class='gc_fw'>
+        <div class='item'>Full width (.gc_fw)</div>
+      </div>
+
+      <div>
+        <div class='item'>default width ( > *)</div>
+      </div>
+
+      <div class='item'>default width ( > *)</div>
+
+      <div class='gc_sm'>
+        <div class='item'>Small width (.gc_sm)</div>
+      </div>
+
+      <>
+        <div style='--gc-col_default: 2 / 5'>
+          <div class='item'>
+            <div>sidebar example</div>
+
+            <div class='g-conainer'>
+              <div class='item_sec'>Demo</div>
+            </div>
+          </div>
+        </div>
+
+        <div style='--gc-col_default: 5 / 14'>
+          <div class='item'>
+            <div>Content exemple</div>
+
+            <div class='g-container' style='--_gc-gap: 20px'>
+              <div class='item_sec' style='--gc-col_default: 1 / 7'>
+                demo sub column
+              </div>
+              <div class='item_sec' style='--gc-col_default: 7 / 13'>
+                demo sub column
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+
+      <>
+        <div style='--gc-col_default: 2 / 5'>
+          <div class='item'>
+            <div>Content exemple</div>
+          </div>
+        </div>
+
+        <div style='--gc-col_default: 5 / 9'>
+          <div class='g-conainer'>
+            <div class='item'>Demo</div>
+          </div>
+        </div>
+
+        <div style='--gc-col_default: 10 / 14'>
+          <div class='g-conainer'>
+            <div class='item'>Demo</div>
+          </div>
+        </div>
+      </>
+
+      <>
+        <div style='--gc-col_default: 2 / 5'>
+          <div class='item'>
+            <div>Content exemple</div>
+          </div>
+        </div>
+
+        <div style='--gc-col_default: 5 / 14'>
+          <div class='g-container' style='--_gc-gap: 20px'>
+            <div class='item_sec' style='--gc-col_default: 1 / 7'>
+              demo sub column
+            </div>
+
+            <div class='item_sec' style='--gc-col_default: 7 / 13'>
+              demo sub column
+            </div>
+          </div>
+        </div>
+      </>
+    </div>
+  </div>
+
+  <div class='pb-5'>
+    <div class='g-container'>
+      <h3>Caz real</h3>
+
+      <div class='sidebar' style='--gc-col_default: 2 / 5'>
+        <div class='item'>Sidebar</div>
+      </div>
+
+      <div class='content' style='--gc-col_default: 5 / 14'>
+        <div class='item g-container'>
+          <div class='item_sec' style='--gc-col_default: 1 / 5'>
+            paragraph text
+          </div>
+
+          <div class='item_sec' style='--gc-col_default: 5 / 13'>
+            paragraph image
+          </div>
+
+          <div class='item_sec' style='--gc-col_default: 1 / 5'>
+            paragraph text
+          </div>
+
+          <div class='' style='--gc-col_default: 5 / 13'>
+            <div class='content' style='--gc-col_default: 5 / 14'>
+              <div class='item g-container' style='--_gc-gap_col: 10px'>
+                <div class='item_sec' style='--gc-col_default: 1 / 5'>
+                  paragraph text
+                </div>
+
+                <div class='item_sec' style='--gc-col_default: 5 / 13'>
+                  paragraph image
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Page>
+
+<style>
+  .pb-5 {
+    padding-block: 2.5rem;
+  }
+
+  .item,
+  .item_sec {
+    border-radius: var(--br);
+  }
+
+  .item:not(:has(.item_sec)),
+  .item_sec {
+    padding: 8px;
+  }
+
+  .item {
+    background-color: bisque;
+  }
+
+  .item_sec {
+    background-color: rgb(244, 189, 121);
+  }
+</style>

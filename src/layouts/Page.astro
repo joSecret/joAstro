@@ -1,0 +1,31 @@
+---
+import Body from '@c/astro/body.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  container?: boolean;
+}
+
+const { title, description, container = false } = Astro.props;
+---
+
+<Body>
+  <Header />
+
+  <main>
+    {
+      container ? (
+        <slot />
+      ) : (
+        <div class='g-container pb-3'>
+          <slot />
+        </div>
+      )
+    }
+  </main>
+
+  <Footer />
+</Body>
