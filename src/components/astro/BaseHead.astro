@@ -8,6 +8,7 @@ import '@s/grid.pcss.css';
 import '@s/buttons.pcss.css';
 import '@s/transitions.pcss.css';
 import '@s/helpers.pcss.css';
+import { AstroFont } from 'astro-font';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
 
 const base = import.meta.env.BASE_UR;
@@ -30,23 +31,25 @@ const {
 <!-- Global Metadata -->
 <meta charset='utf-8' />
 <meta name='viewport' content='width=device-width,initial-scale=1' />
-<link rel='icon' type='image/svg+xml' href='favicon.svg' />
+<link rel='icon' type='image/svg+xml' href='./public/favicon.svg' />
 <meta name='generator' content={Astro.generator} />
 
 <!-- Font preloads -->
-<link
-  rel='preload'
-  href='fonts/atkinson-regular.woff'
-  as='font'
-  type='font/woff'
-  crossorigin
-/>
-<link
-  rel='preload'
-  href='fonts/atkinson-bold.woff'
-  as='font'
-  type='font/woff'
-  crossorigin
+<AstroFont
+  config={[
+    {
+      src: [],
+      name: 'Raleway',
+      // Google Fonts URL
+      googleFontsURL:
+        'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap',
+      preload: true,
+      display: 'swap',
+      selector: 'body',
+      fallback: 'sans-serif',
+      cssVariable: 'ff',
+    },
+  ]}
 />
 
 <!-- Canonical URL -->
