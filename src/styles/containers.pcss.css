@@ -1,0 +1,104 @@
+:root {
+  --gutter-x: var(--gutter);
+  --gutter-y: var(--gutter);
+  --container-py: var(--gutter);
+
+  @media (--sm) {
+    --container-mw: 540px;
+  }
+
+  @media (--md) {
+    --container-mw: 720px;
+  }
+
+  @media (--lg) {
+    --container-mw: 880px;
+  }
+
+  @media (--xl) {
+    --container-mw: 1140px;
+  }
+
+  @media (--xxl) {
+    --container-mw: 1320px;
+  }
+}
+
+.g-container {
+  --_gc-rows: 6;
+  --_gc-mw: calc(var(--container-mw, 100%) - var(--container-py) * 2);
+  --_gc-mi: 20px;
+  --_gc-gap_s: 16px;
+  --_gc-gap_col: var(--_gc-gap_s);
+  --_gc-gap_row: calc(var(--_gc-gap_s) / 2);
+  --_gc-col_default: container;
+
+  @media (--md) {
+    --_gc-rows: 12;
+    --_gc-gap_s: 40px;
+    --_gc-mw: calc(var(--container-mw, 100%) - var(--container-py));
+  }
+
+  /* Calcul */
+  --_calc_cg-mi: calc(var(--_gc-mi) - var(--_gc-gap_s));
+
+  display: grid;
+  grid-template-columns:
+    var(
+      --_gc_gtcolum,
+      [full-start] minmax(var(--_calc_cg-mi), 1fr) [container-start]
+        repeat(
+          var(--_gc-rows),
+          calc(
+            (var(--_gc-mw) - var(--_gc-gap_s) * (var(--_gc-rows) - 1)) /
+              var(--_gc-rows)
+          )
+        )
+    )
+    [container-end]
+    minmax(var(--_calc_cg-mi), 1fr) [full-end];
+  column-gap: var(--_gc-gap_col);
+  row-gap: var(--_gc-gap_row);
+
+  & > * {
+    grid-column: var(--gc-col_default, var(--_gc-col_default));
+
+    &:not(.gc_fw) {
+      .g-container {
+        --_gc_gtcolum: [container-start]
+          repeat(
+            var(--_gc-rows),
+            calc(
+              (100% - var(--_gc-gap_s) * (var(--_gc-rows) - 1)) /
+                var(--_gc-rows)
+            )
+          )
+          [container-end];
+        column-gap: var(--_gc-gap_col);
+        row-gap: var(--_gc-gap_row);
+
+        & > * {
+          grid-column: var(--gc-col_default, var(--_gc-col_default));
+        }
+      }
+    }
+  }
+
+  &.grid-container_fw,
+  & > .gc_fw {
+    --_gc-col_default: full;
+  }
+
+  &.grid-container_sm > *,
+  & > .gc_sm {
+    --_gc-col_default: var(--_gc-col_sm, container);
+
+    @media (--lg) {
+      --_gc-col_sm: 4 / 12;
+    }
+
+    @media (--xlg) {
+      --_gc-col_sm: 5 / 11;
+    }
+  }
+}

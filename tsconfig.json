@@ -9,6 +9,7 @@
       "@/*": ["src/*"],
       "@s/*": ["src/style/*"],
       "@c/*": ["src/components/*"],
+      "@s/*": ["src/styles/*"],
       "@c-base/*": ["src/components/base/*"],
       "@img/*": ["src/assets/img/*"],
       "@data/*": ["src/data/*"],
