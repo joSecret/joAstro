@@ -1,0 +1,70 @@
+.box {
+  isolation: isolate;
+  background-color: #083266;
+
+  .box--overlay {
+    isolation: isolate;
+    display: grid;
+    grid-template-areas: 'stack';
+    position: relative;
+    z-index: -1;
+
+    height: max(250px, 50dvh);
+
+    & > * {
+      grid-area: stack;
+    }
+
+    &:has(.fixed) {
+      clip-path: margin-box;
+    }
+  }
+
+  .box-gradient {
+    position: relative;
+    z-index: -1;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(8, 50, 102, 100) 100%
+    );
+    opacity: 0.45;
+  }
+
+  .box-img {
+    position: relative;
+    inset: 0;
+    z-index: -2;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+
+    &.fixed {
+      img {
+        position: fixed;
+        inset: 0;
+        height: 100%;
+      }
+    }
+  }
+
+  &.reverse {
+    .overlay {
+      order: 1;
+    }
+  }
+
+  &.style-1 {
+    .box--overlay,
+    .box--content {
+      grid-row: 1 / 2;
+    }
+
+    .box--content {
+      align-self: center;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 ---
-import Body from '@c/astro/body.astro';
+import Warning from '@c/other/Warning-css-support.astro';
+
+import Body from '@c/astro/Html.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -16,6 +18,8 @@ const { title, description, container = false } = Astro.props;
   <Header />
 
   <main>
+    <Warning />
+
     {
       container ? (
         <slot />

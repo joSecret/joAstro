@@ -1,0 +1,11 @@
+@supports selector(::details-content) {
+  .warning {
+    display: none;
+  }
+}
+
+@supports (interpolate-size: allow-keywords) {
+  .warning {
+    display: none;
+  }
+}

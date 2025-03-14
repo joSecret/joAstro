@@ -1,0 +1,39 @@
+---
+import Layout from '@c/astro/Html.astro';
+import LayoutDocs from '@c/astro/layout/layout-docs/Layout-docs.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  container?: boolean;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout>
+  <LayoutDocs>
+    <div class='region' slot='logo'>logo</div>
+    <div class='region' slot='header-top'>Header top</div>
+    <div class='region' slot='header'>
+      <h1>title</h1>
+      <p>description</p>
+      <div>
+        <input type='search' placeholder='Search' />
+      </div>
+      <button onclick="alert('Button clicked!')">Search</button>
+    </div>
+    <div class='region' slot='nav'>navbar</div>
+    <div class='region' slot='sidebar'>sidebar</div>
+    <div class='region' slot='main'><slot /></div>
+    <div class='region' slot='footer'>Copyright 2022</div>
+  </LayoutDocs>
+</Layout>
+
+<style>
+  .region {
+    background-color: var(--c-gray-300);
+    border-radius: var(--br);
+    padding-inline: var(--s-1);
+  }
+</style>

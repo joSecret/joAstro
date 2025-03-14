@@ -1,0 +1,40 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'button'> {
+  type?: 'button' | 'submit';
+  size?: 'sm' | 'md' | 'lg';
+  isfilled?: boolean;
+  theme?:
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'danger'
+    | 'warning'
+    | 'info'
+    | 'light'
+    | 'dark';
+  classes?: string;
+}
+
+const {
+  type = 'button',
+  size = 'md',
+  isfilled,
+  theme = 'light',
+  classes,
+  ...rest
+} = Astro.props;
+
+const background = `var(--${theme})`;
+const foreground = theme === 'light' ? 'var(--primary)' : 'var(--light)';
+---
+
+<button
+  class:list={[classes, { filled: isfilled }]}
+  {type}
+  data-size={size}
+  {...rest}
+>
+  <slot />
+</button>

@@ -1,0 +1,46 @@
+---
+import './accordion.pcss.css';
+
+import type { HTMLAttributes } from 'astro/types';
+
+interface AccordionItem {
+  summary: string;
+  content: string;
+}
+
+interface Props extends HTMLAttributes<'div'> {
+  name: string;
+  isflush?: boolean;
+  isopen?: boolean;
+  allopen?: boolean;
+  classes?: string;
+  items: AccordionItem[];
+}
+
+const {
+  items = [],
+  name = 'accordion',
+  isflush,
+  isopen,
+  allopen,
+  classes,
+  ...rest
+} = Astro.props;
+---
+
+<div
+  class:list={['accordion', classes, { 'accordion-flush': isflush }]}
+  {...rest}
+>
+  {
+    items.map((item, index) => (
+      <details
+        {...(allopen ? { name: name } : {})}
+        {...(isopen && index == 0 ? { open: true } : {})}
+      >
+        <summary>{item.summary}</summary>
+        <div class='accordion-content'>{item.content}</div>
+      </details>
+    ))
+  }
+</div>

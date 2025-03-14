@@ -1,0 +1,78 @@
+---
+import Layout from '@l/Page.astro';
+import Box from '@/components/other/box/Box.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Box img='iisd.png' overlayClass='w--full'>
+    <h2>Day-to-Day Benefits for Canadians</h2>
+    <h4>Clean Power Can Be Reliable</h4>
+    The government provided significant support to the oil and gas sector through
+    direct budgetary transfers to state-owned oil marketing companies (OMCs) in FY
+    2023. During this period, total oil and gas subsidies rose to at least INR 70,692
+    crore (USD 8.8 billion), a 63% increase from FY 2022. Over the last decade, the
+    nature of oil and gas subsidies provided has shifted from substantial consumer
+    price support for petrol and diesel (until FY 2015) to domestic LPG in FY 2023.
+    Consumer price support for petrol and diesel is now provided through excise and
+    VAT cuts since India adopted a variable approach to excise and VAT on fuel. However,
+    the variable approach to excise and VAT on fuel results in the absence of a clear
+    benchmark for determining subsidies, and our estimates, therefore, do not include
+    the impact of these tax cuts in our subsidy totals.
+  </Box>
+
+  <Box class='reverse' img='blog-placeholder-1.jpg' overlayClass='w--full'>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+    impedit! Blanditiis asperiores rerum repellendus fugit suscipit modi quis in
+    dolorum debitis et! Blanditiis, quis labore! Vitae eaque laborum suscipit
+    ipsam!
+  </Box>
+
+  <Box
+    class='style-1 w--sm'
+    img='blog-placeholder-3.jpg'
+    overlayClass='w--full'
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+    impedit! Blanditiis asperiores rerum repellendus fugit suscipit modi quis in
+    dolorum debitis et! Blanditiis, quis labore! Vitae eaque laborum suscipit
+    ipsam!
+  </Box>
+
+  <Box class='style-1' img='blog-placeholder-3.jpg' overlayClass='w--full'>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+    impedit! Blanditiis asperiores rerum repellendus fugit suscipit modi quis in
+    dolorum debitis et! Blanditiis, quis labore! Vitae eaque laborum suscipit
+    ipsam!
+  </Box>
+
+  <Box
+    class='w--sm reverse'
+    img='blog-placeholder-2.jpg'
+    overlayClass='row-50-first-full'
+    contentClass='row-50-last'
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+    impedit! Blanditiis asperiores rerum repellendus fugit suscipit modi quis in
+    dolorum debitis et! Blanditiis, quis labore! Vitae eaque laborum suscipit
+    ipsam!
+  </Box>
+
+  <Box
+    class='w--sm w--dense align-items-center'
+    img='blog-placeholder-2.jpg'
+    overlayClass='row-50-last-full'
+    contentClass='row-50-first'
+  >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur,
+    impedit! Blanditiis asperiores rerum repellendus fugit suscipit modi quis in
+    dolorum debitis et! Blanditiis, quis labore! Vitae eaque laborum suscipit
+    ipsam!
+  </Box>
+</Layout>

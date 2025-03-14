@@ -1,0 +1,119 @@
+---
+import './layout-docs.pcss.css';
+
+import Button from '@c/astro/Button.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div class='page-docs'>
+  <header class='pb-mob pd--header'>
+    <slot name='header' />
+  </header>
+
+  <div class='pb-mob pd--sidebar'>
+    <slot name='sidebar' />
+  </div>
+
+  <div class='pb-mob pd--nav'>
+    <slot name='nav' />
+  </div>
+
+  <div class='pd--header-top'>
+    <slot name='header-top' />
+  </div>
+
+  <div class='pd--logo'>
+    <slot name='logo' />
+  </div>
+
+  <main class='pd--main'>
+    <slot name='main' />
+  </main>
+
+  <div class='pd--footer'>
+    <slot name='footer' />
+  </div>
+
+  <div class='page-docs--mob-menu'>
+    <ul class='list-inline'>
+      <li>
+        <Button
+          class='btn-only-icon'
+          isAriaExpanded={false}
+          isAriaControl='pb--sidebar'
+        >
+          <span slot='icon'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='24'
+              viewBox='0 0 24 24'
+              style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'
+              ><path
+                d='M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM4 19V7h6v12H4zm8 0V7h8V5l.002 14H12z'
+              ></path><path d='M6 10h2v2H6zm0 4h2v2H6z'></path></svg
+            >
+          </span>
+        </Button>
+      </li>
+      <li><button>Search</button></li>
+      <li>
+        <Button
+          class='btn-only-icon'
+          isAriaExpanded={false}
+          isAriaControl='pb--nav'
+        >
+          <span slot='icon'>
+            <svg
+              width='24'
+              height='24'
+              viewBox='0 0 24 24'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z'
+                fill='currentColor'></path>
+              <path
+                d='M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z'
+                fill='currentColor'></path>
+              <path
+                d='M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z'
+                fill='currentColor'></path>
+            </svg>
+          </span>
+        </Button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script is:inline>
+  document.querySelectorAll('.pb-mob').forEach((el) => {
+    el.addEventListener('click', (event) => {
+      if (event.target === el) {
+        const btn = document.querySelector('[aria-expanded="true"]');
+
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  const btnsGroup = document.querySelectorAll('.page-docs--mob-menu .btn');
+
+  btnsGroup.forEach((el) => {
+    el.addEventListener('click', () => {
+      btnsGroup.forEach((btn) => {
+        if (btn !== el) {
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  });
+</script>

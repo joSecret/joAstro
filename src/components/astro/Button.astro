@@ -1,0 +1,55 @@
+---
+import '@s/buttons.pcss.css';
+
+// import type { HTMLAttributes } from 'astro/types';
+
+interface Props {
+  href?: string;
+  target?: string;
+  type?: string;
+  class?: string;
+  icon?: 'left' | 'right' | 'only';
+  isDisabled?: boolean;
+  isAriaExpanded?: boolean;
+  isAriaControl?: string;
+}
+
+const {
+  href,
+  target,
+  type,
+  isDisabled,
+  class: className,
+  icon = 'right',
+  isAriaExpanded = false,
+  isAriaControl,
+  ...props
+} = Astro.props;
+
+const Tag = href ? 'a' : 'button';
+const defaultClass = ['btn'];
+const additionalClasses = className ? className.split(' ') : [];
+---
+
+<Tag
+  target={target}
+  type={type}
+  disabled={isDisabled}
+  class:list={[defaultClass, additionalClasses]}
+  aria-expanded={isAriaExpanded}
+  aria-controls={isAriaControl}
+  {...props}
+>
+  <slot name='icon' />
+  <slot />
+</Tag>
+
+<script>
+  document.querySelectorAll('.btn').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation();
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !isExpanded);
+    });
+  });
+</script>

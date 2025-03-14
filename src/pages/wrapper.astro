@@ -1,0 +1,111 @@
+---
+import Layout from '@l/Page.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <div class='wrapper w--dense'>
+    <p class='w--full'>
+      Fusce at nisi arcu. Quisque sed dolor nec dui scelerisque dapibus. Sed at
+      purus at sem aliquet luctus. Sed non massa sit amet sapien porttitor
+      ornare. Vivamus pretium, tortor at tempus ullamcorper, diam ligula
+      lobortis quam, at scelerisque libero lectus ut risus.
+    </p>
+    <p class='half-last'>
+      Fusce at nisi arcu. Quisque sed dolor nec dui scelerisque dapibus. Sed at
+      purus at sem aliquet luctus. Sed non massa sit amet sapien porttitor
+      ornare. Vivamus pretium, tortor at tempus ullamcorper, diam ligula
+      lobortis quam, at scelerisque libero lectus ut risus.
+    </p>
+    <p class='half-first'>
+      Fusce at nisi arcu. Quisque sed dolor nec dui scelerisque dapibus. Sed at
+      purus at sem aliquet luctus. Sed non massa sit amet sapien porttitor
+      ornare. Vivamus pretium, tortor at tempus ullamcorper, diam ligula
+      lobortis quam, at scelerisque libero lectus ut risus.
+    </p>
+    <p class='full-50-first'>
+      Nullam nec turpis et arcu egestas commodo. Integer sit amet metus non
+      tortor tincidunt interdum. Donec et metus mollis, ultricies est at,
+      ultricies nulla. Morbi non libero magna. Praesent imperdiet magna ac ipsum
+      cursus, ut fermentum turpis tincidunt.
+    </p>
+    <p>
+      Mauris vitae quam in justo dictum sodales. In eget tortor a nunc vehicula
+      tempor. Nam ac tincidunt ipsum, eget accumsan nisi. Praesent porta, magna
+      vitae dapibus pharetra, erat eros efficitur nunc, in mattis lectus libero
+      a velit. Nulla facilisi.
+    </p>
+  </div>
+
+  <div class='wrapper w--lg'>
+    <p class='h4'>w--lg</p>
+    <p class='half'>
+      Nullam quis arcu in magna pulvinar tincidunt. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nam hendrerit nulla ut cursus laoreet. Nullam
+      elementum lorem vel facilisis laoreet. Cras ac turpis vel erat vehicula
+      venenatis. Praesent placerat, magna in vehicula vestibulum, felis urna
+      cursus lorem, sed vestibulum quam eros vel libero. Vivamus commodo, odio
+      sed fringilla pretium, sem nulla feugiat odio, in cursus elit dolor et ex.
+    </p>
+    <p>
+      Nam tempor finibus lorem, nec varius arcu convallis sed. Nunc id orci a
+      neque vehicula malesuada. Donec vehicula libero vel leo convallis, nec
+      tincidunt felis tincidunt. Maecenas euismod tristique leo, vel malesuada
+      ligula malesuada sed. Donec eget libero id leo congue venenatis.
+    </p>
+  </div>
+
+  <div class='wrapper w--sm w--dense'>
+    <p class='h4'>w--sm</p>
+    <p>
+      Nullam quis arcu in magna pulvinar tincidunt. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nam hendrerit nulla ut cursus laoreet. Nullam
+      elementum lorem vel facilisis laoreet. Cras ac turpis vel erat vehicula
+      venenatis. Praesent placerat, magna in vehicula vestibulum, felis urna
+      cursus lorem, sed vestibulum quam eros vel libero. Vivamus commodo, odio
+      sed fringilla pretium, sem nulla feugiat odio, in cursus elit dolor et ex.
+    </p>
+    <p class='row-50-first'>
+      Nullam quis arcu in magna pulvinar tincidunt. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nam hendrerit nulla ut cursus laoreet. Nullam
+      elementum lorem vel facilisis laoreet. Cras ac turpis vel erat vehicula
+      venenatis. Praesent placerat, magna in vehicula vestibulum, felis urna
+      cursus lorem, sed vestibulum quam eros vel libero. Vivamus commodo, odio
+      sed fringilla pretium, sem nulla feugiat odio, in cursus elit dolor et ex.
+    </p>
+    <p class='row-50-last-full'>
+      Nam tempor finibus lorem, nec varius arcu convallis sed. Nunc id orci a
+      neque vehicula malesuada. Donec vehicula libero vel leo convallis, nec
+      tincidunt felis tincidunt. Maecenas euismod tristique leo, vel malesuada
+      ligula malesuada sed. Donec eget libero id leo congue venenatis.
+    </p>
+    <p class='row-50-first-full'>
+      Nam tempor finibus lorem, nec varius arcu convallis sed. Nunc id orci a
+      neque vehicula malesuada. Donec vehicula libero vel leo convallis, nec
+      tincidunt felis tincidunt. Maecenas euismod tristique leo, vel malesuada
+      ligula malesuada sed. Donec eget libero id leo congue venenatis.
+    </p>
+    <p class='row-50-last'>
+      Nullam quis arcu in magna pulvinar tincidunt. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Nam hendrerit nulla ut cursus laoreet. Nullam
+      elementum lorem vel facilisis laoreet. Cras ac turpis vel erat vehicula
+      venenatis. Praesent placerat, magna in vehicula vestibulum, felis urna
+      cursus lorem, sed vestibulum quam eros vel libero. Vivamus commodo, odio
+      sed fringilla pretium, sem nulla feugiat odio, in cursus elit dolor et ex.
+    </p>
+  </div>
+</Layout>
+
+<style is:inline>
+  .wrapper {
+    & > p {
+      border: 1px solid rebeccapurple;
+    }
+  }
+</style>
