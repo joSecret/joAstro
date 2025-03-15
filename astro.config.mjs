@@ -5,9 +5,9 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://josecret.github.io',
-  base: '.',
-	outDir: "public",
+  site: 'https://josecret.github.io',
+  base: 'joAstro',
+  outDir: "public",
   publicDir: "static",
-	integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap()],
 });
