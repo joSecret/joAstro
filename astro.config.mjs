@@ -8,6 +8,6 @@ export default defineConfig({
   site: 'https://josecret.github.io',
   base: 'joAstro',
   outDir: "public",
-  publicDir: "static",
+  // publicDir: "static",
   integrations: [mdx(), sitemap()],
 });
