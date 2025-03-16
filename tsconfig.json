@@ -8,11 +8,12 @@
     "paths": {
       "@/*": ["src/*"],
       "@c/*": ["src/components/*"],
-      "@c-base/*": ["src/components/base/*"],
+      "@l/*": ["src/layouts/*"],
       "@s/*": ["src/style/*"],
+      "@ss/*": ["src/style-current/*"],
+      "@c-base/*": ["src/components/base/*"],
       "@img/*": ["src/assets/img/*"],
       "@data/*": ["src/data/*"],
-      "@l/*": ["src/layouts/*"],
     }
   }
 }

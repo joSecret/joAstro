@@ -1,0 +1,22 @@
+---
+import Layout from '@l/Page.astro';
+import Component from '@l/Page-docs.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<Layout title={title} description={description}>
+  <Component>
+    <p>
+      Fusce at nisi arcu. Quisque sed dolor nec dui scelerisque dapibus. Sed at
+      purus at sem aliquet luctus. Sed non massa sit amet sapien porttitor
+      ornare. Vivamus pretium, tortor at tempus ullamcorper, diam ligula
+      lobortis quam, at scelerisque libero lectus ut risus.
+    </p>
+  </Component>
+</Layout>
