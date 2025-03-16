@@ -2,12 +2,12 @@
 title: 'Layout Docs'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jun 01 2024'
-heroImage: 'blog-placeholder-5.jpg'
+heroImage: 'layout-docs.svg'
 categories:
   - 'Layout'
 ---
 
-import LayoutDocs from '@c/astro/layout/layout-docs/Layout-docs.astro';
+import LayoutDocs from '@c/other/layout/layout-docs/Layout-docs.astro';
 
 <LayoutDocs>
   <div class='region' slot='logo'>logo</div>
@@ -15,6 +15,6 @@ import LayoutDocs from '@c/astro/layout/layout-docs/Layout-docs.astro';
   <div class='region' slot='header'>search</div>
   <div class='region' slot='nav'>navbar</div>
   <div class='region' slot='sidebar'>sidebar</div>
-  <div class='region' slot='main'><slot /></div>
+  <div class='region' slot='main'>Content</div>
   <div class='region' slot='footer'>Copyright 2022</div>
 </LayoutDocs>

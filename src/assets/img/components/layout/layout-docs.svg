@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="68" viewBox="0 0 120 68">
+  <defs>
+    <clipPath id="clip-Layout_docs">
+      <rect width="120" height="68"/>
+    </clipPath>
+  </defs>
+  <g id="layout_docs" clip-path="url(#clip-Layout_docs)">
+    <rect width="120" height="68" fill="#fff"/>
+    <rect id="region-content" width="88" height="52" rx="2" transform="translate(32 16)" fill="#ebebeb"/>
+    <rect id="region-sidebar" width="30" height="56" rx="2" transform="translate(0 12)" fill="#ebebeb"/>
+    <rect id="region-navbar" width="28" height="6" rx="2" transform="translate(92 8)" fill="#ebebeb"/>
+    <rect id="region-search" width="58" height="6" rx="2" transform="translate(32 8)" fill="#ebebeb"/>
+    <rect id="region-header" width="88" height="6" rx="2" transform="translate(32)" fill="#ebebeb"/>
+    <rect id="region-logo" width="30" height="10" rx="2" fill="#ebebeb"/>
+  </g>
+</svg>
+

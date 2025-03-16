@@ -29,9 +29,16 @@ const {
 const Tag = href ? 'a' : 'button';
 const defaultClass = ['btn'];
 const additionalClasses = className ? className.split(' ') : [];
+
+const base = import.meta.env.BASE_URL;
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+const subpath = pathname.match(/[^\/]+/g);
+const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+const lHref = base + href;
 ---
 
 <Tag
+  href={lHref}
   target={target}
   type={type}
   disabled={isDisabled}

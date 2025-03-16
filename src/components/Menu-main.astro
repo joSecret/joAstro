@@ -1,5 +1,7 @@
 ---
 import Link from '@c/Link.astro';
+import Image from '@c/Images.astro';
+
 import { getCollection } from 'astro:content';
 
 const components = await getCollection('component');
@@ -16,15 +18,21 @@ const groupedComponents = components.reduce((acc, component) => {
 ---
 
 <nav>
-  <ul>
+  <ul class='list-unstyled'>
     {
       Object.entries(groupedComponents).map(([category, components]) => (
         <li>
           <strong>{category}</strong>
-          <ul>
+          <ul class='list-unstyled'>
             {components.map((component) => (
               <li>
                 <Link class='btn' href={`/${component.id}`}>
+                  {component.data.heroImage && (
+                    <Image
+                      imagePath={component.data.heroImage}
+                      altText={`see more about ${component.data.title}`}
+                    />
+                  )}
                   {component.data.title}
                 </Link>
               </li>

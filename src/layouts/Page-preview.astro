@@ -13,9 +13,5 @@ const { title, description } = Astro.props;
 ---
 
 <Body>
-  <LayoutComponent>
-    <Header slot='header' />
-    <slot />
-    <MenuMain slot='sidebar' />
-  </LayoutComponent>
+  <slot />
 </Body>
