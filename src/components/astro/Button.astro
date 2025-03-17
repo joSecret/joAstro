@@ -34,7 +34,7 @@ const base = import.meta.env.BASE_URL;
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
-const lHref = base + href;
+const lHref = href ? `${base}${href}` : null;
 ---
 
 <Tag

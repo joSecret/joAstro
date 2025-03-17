@@ -22,6 +22,7 @@ const component = defineCollection({
 		description: z.string(),
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
+		componentPath: z.string().optional(),
 		categories: z.array(z.string()).optional(),
 		heroImage: z.string().optional(),
 	}),

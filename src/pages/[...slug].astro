@@ -12,11 +12,11 @@ export async function getStaticPaths() {
     props: post,
   }));
 }
+
 type Props = CollectionEntry<'component'>;
 
 const base = import.meta.env.BASE_URL;
 const post = Astro.props;
-const { Content } = await render(post);
 ---
 
 <BlogPost {...post.data}>

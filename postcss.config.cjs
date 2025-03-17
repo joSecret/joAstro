@@ -41,6 +41,7 @@ module.exports = {
         'has-pseudo-class': false,
         'image-set-function': false,
         'prefers-color-scheme-query': false,
+        'logical-properties-and-values': false,
       }
     }),
     postcssMixins({

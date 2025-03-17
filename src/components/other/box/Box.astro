@@ -4,24 +4,29 @@ import Image from '@c/Images.astro';
 
 interface Props {
   img?: string;
+  text?: string;
   class?: string;
   overlayClass?: string;
   contentClass?: string;
 }
 
-const { img, class: className, overlayClass, contentClass } = Astro.props;
+const { img, text, class: className, overlayClass, contentClass } = Astro.props;
 
-const defaultClass = ['wrapper', 'box'];
 const additionalClasses = className ? className.split(' ') : [];
 ---
 
-<div class:list={[defaultClass, additionalClasses]}>
-  <div class:list={['box--overlay', overlayClass]}>
-    <div class='box-gradient'></div>
-    <div class='box-img'>
-      {img && <Image imagePath={img} altText='some alt text' />}
-    </div>
-  </div>
+<div class:list={['wrapper', 'c-box', additionalClasses]}>
+  {
+    img && (
+      <Image
+        imagePath={img}
+        altText='some alt text'
+        class='c-media c-media--image c-media--default w--full'
+      />
+    )
+  }
+
+  {text && <div class='box--second'>{text}</div>}
 
   <div class:list={['box--content', contentClass]}>
     <slot />

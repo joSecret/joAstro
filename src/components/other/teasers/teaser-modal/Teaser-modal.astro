@@ -1,0 +1,44 @@
+---
+import './style.pcss.css';
+
+import Images from '@c/Images.astro';
+import Button from '@c/astro/Button.astro';
+
+const alt = 'Alt text for image';
+
+interface Props {
+  img?: string;
+}
+
+const { img, class: className } = Astro.props;
+
+const classesDefault = ['c--teaser-modal'];
+const classes = className ? className.split(' ') : [];
+
+const id = Math.random().toString(36);
+---
+
+<div class:list={[classesDefault, classes]}>
+  <div class='w--user'>
+    {img && <Images imagePath={img} class='field-media' />}
+    <div class='w--user-info'>
+      <slot name='name' />
+      <slot name='position' />
+    </div>
+  </div>
+  <slot name='short-description' />
+  <Button class='btn-primary' popovertarget={id}>Read more</Button>
+
+  <div popover id={id}>
+    <Button class='btn-close' popovertarget={id}>Close</Button>
+    {
+      img && (
+        <Images imagePath={img} width={324} height={324} class='field-media' />
+      )
+    }
+    <slot name='name' />
+    <slot name='position' />
+    <div class='divider'></div>
+    <slot name='description' />
+  </div>
+</div>

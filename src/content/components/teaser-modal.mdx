@@ -1,0 +1,59 @@
+---
+title: 'Layout Docs'
+description: 'Lorem ipsum dolor sit amet'
+pubDate: 'Jun 01 2024'
+heroImage: 'layout-docs.svg'
+componentPath: '@c/other/teasers/teaser-modal/Teaser-modal.astro'
+categories:
+  - 'Teaser'
+---
+
+import Component from '@c/other/teasers/teaser-modal/Teaser-modal.astro';
+
+<div class="wrapper bg-light p_b">
+  <Component img='persons/person-1.jpg'>
+    <h4 slot="name" class="name">Giulia Ferrini</h4>
+    <div slot="position" class="position">OGMP 2.0 Programme MANAGER</div>
+    <div slot="short-description" class="short-description">Giulia Ferrini manages OGMP 2.0 and is one of the co-founders of IMEO.</div>
+    <div slot="description" class="description">Giulia Ferrini manages OGMP 2.0 and is one of the co-founders of IMEO.
+  She has 12+ years of experience at the UN where she worked on the design and implementation of climate change projects.
+  Her experience led her to work with governments, financial institutions, the private sector and not-for-profit organisations involved in climate change mitigation.
+  Giulia holds a MA in International Relations from the III University of Rome, in Italy, and a MSc in Politics and Governments from the London School of Economics, in the UK.</div>
+  </Component>
+</div>
+
+<div class="wrapper bg-light p_b">
+  <div class="views-view-responsive-grid" style="--views-responsive-grid--column-count: 3">
+    <div class="views-view-responsive-grid--horizontal">
+      <Component img='persons/person-1.jpg' id='tm-1'>
+      <h4 slot="name" class="name">Giulia Ferrini</h4>
+      <div slot="position" class="position">OGMP 2.0 Programme MANAGER</div>
+      <div slot="short-description" class="short-description">Giulia Ferrini manages OGMP 2.0 and is one of the co-founders of IMEO.</div>
+      <div slot="description" class="description">Giulia Ferrini manages OGMP 2.0 and is one of the co-founders of IMEO.
+    She has 12+ years of experience at the UN where she worked on the design and implementation of climate change projects.
+    Her experience led her to work with governments, financial institutions, the private sector and not-for-profit organisations involved in climate change mitigation.
+    Giulia holds a MA in International Relations from the III University of Rome, in Italy, and a MSc in Politics and Governments from the London School of Economics, in the UK.</div>
+    </Component>
+
+    <Component img='persons/person-2.jpg' id='tm-2'>
+      <h4 slot="name" class="name">Tania Meixus Fernandez</h4>
+      <div slot="position" class="position">SENIOR ADVISOR</div>
+      <div slot="short-description" class="short-description">Tania Meixus has over 15 years of experience in the gas business in different departments of Enagás.</div>
+      <div slot="description" class="description">Giulia Ferrini manages OGMP 2.0 and is one of the co-founders of IMEO.
+    She has 12+ years of experience at the UN where she worked on the design and implementation of climate change projects.
+    Her experience led her to work with governments, financial institutions, the private sector and not-for-profit organisations involved in climate change mitigation.
+    Giulia holds a MA in International Relations from the III University of Rome, in Italy, and a MSc in Politics and Governments from the London School of Economics, in the UK.</div>
+    </Component>
+
+    <Component img='persons/person-3.jpg' id='tm-3'>
+      <h4 slot="name" class="name">Ricardo Esparza Gamez</h4>
+      <div slot="position" class="position">Data Analyst</div>
+      <div slot="short-description" class="short-description">Giulia Ferrini manages OGMP 2.0 and is one of the co-founders of IMEO.</div>
+      <div slot="description" class="description">Giulia Ferrini manages OGMP 2.0 and is one of the co-founders of IMEO.
+    She has 12+ years of experience at the UN where she worked on the design and implementation of climate change projects.
+    Her experience led her to work with governments, financial institutions, the private sector and not-for-profit organisations involved in climate change mitigation.
+    Giulia holds a MA in International Relations from the III University of Rome, in Italy, and a MSc in Politics and Governments from the London School of Economics, in the UK.</div>
+    </Component>
+    </div>
+  </div>
+</div>
