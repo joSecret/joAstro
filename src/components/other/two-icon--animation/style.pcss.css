@@ -1,0 +1,35 @@
+.svg--animation {
+  --_svg-a_s: 200px;
+  --_svg-a_tt: var(--svg-a_tt, 0.35s);
+  --_svg-a_rotate_deg: 90deg;
+
+  display: grid;
+  grid-template-areas: 'stack';
+  width: var(--_svg-a_s);
+  height: var(--_svg-a_s);
+  align-items: center;
+  justify-content: center;
+
+  & svg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    grid-area: stack;
+    opacity: 0;
+    rotate: var(--_svg-a_rotate_deg);
+    visibility: none;
+    pointer-events: none;
+    transition-behavior: discrete;
+    transition-property: opacity, rotate, visibility;
+    transition-duration: var(--_svg-a_tt);
+  }
+
+  &[aria-expanded='true'] > svg:first-child,
+  &[aria-expanded='false'] > svg:last-child {
+    --_svg-a_rotate_deg: 0deg;
+
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+}

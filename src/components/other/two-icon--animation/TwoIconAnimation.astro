@@ -1,0 +1,48 @@
+---
+import './style.pcss.css';
+---
+
+<div class='svg--animation' aria-expanded='true'>
+  <svg
+    width='14'
+    height='15'
+    viewBox='0 0 14 15'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path
+      d='M8.75045 12.4922C8.77378 12.6672 8.71545 12.8538 8.58128 12.9763C8.35378 13.2038 7.98628 13.2038 7.75878 12.9763L5.41961 10.6372C5.28545 10.503 5.22711 10.3222 5.25045 10.153V7.16634L2.45628 3.59051C2.25795 3.33967 2.30461 2.97217 2.55545 2.77384C2.66628 2.69217 2.78878 2.64551 2.91711 2.64551H11.0838C11.2121 2.64551 11.3346 2.69217 11.4454 2.77384C11.6963 2.97217 11.7429 3.33967 11.5446 3.59051L8.75045 7.16634V12.4922ZM4.10711 3.81217L6.41711 6.76384V9.98384L7.58378 11.1505V6.75801L9.89378 3.81217H4.10711Z'
+      fill='#9E9E9E'
+      style='fill:#000000;fill:color(display-p3 0.6200 0.6200 0.6200);fill-opacity:1;'
+    ></path>
+  </svg>
+
+  <svg
+    width='14'
+    height='15'
+    viewBox='0 0 14 15'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path
+      d='M7.85199 7.89583L11.0837 11.1275V11.9792H10.232L7.00033 8.7475L3.76866 11.9792H2.91699V11.1275L6.14866 7.89583L2.91699 4.66417V3.8125H3.76866L7.00033 7.04417L10.232 3.8125H11.0837V4.66417L7.85199 7.89583Z'
+      fill='#9E9E9E'
+      style='fill:#9E9E9E;fill:color(display-p3 0.6200 0.6200 0.6200);fill-opacity:1;'
+    ></path>
+  </svg>
+</div>
+
+<script is:inline>
+  document.querySelectorAll('.svg--animation').forEach((svgAnimation) => {
+    svgAnimation.addEventListener('click', () => {
+      var isExpanded = 'true' === svgAnimation.getAttribute('aria-expanded');
+      svgAnimation.setAttribute('aria-expanded', !isExpanded);
+    });
+  });
+</script>
+
+<style is:inline>
+  .svg--animation {
+    margin-inline: auto;
+  }
+</style>

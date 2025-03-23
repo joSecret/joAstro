@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="68" viewBox="0 0 120 68">
+  <defs>
+    <clipPath id="clip-Layout_components">
+      <rect width="120" height="68"/>
+    </clipPath>
+  </defs>
+  <g id="Layout_components" data-name="Layout components" clip-path="url(#clip-Layout_components)">
+    <rect width="120" height="68" fill="#11469b"/>
+    <rect id="region-content" width="84" height="54" rx="2" transform="translate(34 12)" fill="#ebebeb"/>
+    <rect id="region-sidebar" width="30" height="54" rx="2" transform="translate(2 12)" fill="#ebebeb"/>
+    <rect id="region-header" width="116" height="8" rx="2" transform="translate(2 2)" fill="#ebebeb"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="6" height="6" rx="1" transform="translate(3 3)" fill="#9a9ddb"/>
+    <rect id="Rectangle_15" data-name="Rectangle 15" width="4" height="4" rx="2" transform="translate(112 4)" fill="#9a9ddb"/>
+    <rect id="Rectangle_16" data-name="Rectangle 16" width="4" height="4" rx="2" transform="translate(107 4)" fill="#9a9ddb"/>
+    <rect id="Rectangle_11-2" data-name="Rectangle 11" width="14" height="6" rx="1" transform="translate(10 3)" fill="#9a9ddb"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="8" height="2" rx="1" transform="translate(79 5)" fill="#cecece"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" width="8" height="2" rx="1" transform="translate(88 5)" fill="#cecece"/>
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="8" height="2" rx="1" transform="translate(97 5)" fill="#cecece"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="28" height="2" rx="1" transform="translate(3 17)" fill="#cecece"/>
+    <rect id="Rectangle_17" data-name="Rectangle 17" width="28" height="2" rx="1" transform="translate(3 20)" fill="#cecece"/>
+    <rect id="Rectangle_18" data-name="Rectangle 18" width="28" height="2" rx="1" transform="translate(3 23)" fill="#cecece"/>
+    <rect id="Rectangle_19" data-name="Rectangle 19" width="28" height="2" rx="1" transform="translate(3 26)" fill="#cecece"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="28" height="3" rx="1.5" transform="translate(3 13)" fill="#acacac"/>
+  </g>
+</svg>

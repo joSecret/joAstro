@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="68" viewBox="0 0 120 68">
+  <defs>
+    <clipPath id="clip-Box">
+      <rect width="120" height="68"/>
+    </clipPath>
+  </defs>
+  <g id="Box" clip-path="url(#clip-Box)">
+    <rect width="120" height="68" fill="#11469b"/>
+    <rect id="region-content" width="27" height="30" rx="2" transform="translate(62 36)" fill="#ebebeb"/>
+    <rect id="region-content-2" data-name="region-content" width="27" height="30" rx="2" transform="translate(31 36)" fill="#ebebeb"/>
+    <rect id="region-content-3" data-name="region-content" width="36" height="14" rx="2" transform="translate(72 18)" fill="#ebebeb"/>
+    <rect id="region-content-4" data-name="region-content" width="46" height="14" rx="2" transform="translate(7 18)" fill="#ebebeb"/>
+    <g id="Group_6" data-name="Group 6">
+      <rect id="region-content-5" data-name="region-content" width="27" height="30" rx="2" transform="translate(91 36)" fill="#ebebeb"/>
+      <g id="Group_1" data-name="Group 1" transform="translate(96.998 43)">
+        <path id="Path_1" data-name="Path 1" d="M6,5.5A1.5,1.5,0,1,1,4.5,4,1.5,1.5,0,0,1,6,5.5" fill="#b4b4b4"/>
+        <path id="Path_2" data-name="Path 2" d="M2,1A2,2,0,0,0,0,3V13a2,2,0,0,0,2,2H14a2,2,0,0,0,2-2V3a2,2,0,0,0-2-2ZM14,2a1,1,0,0,1,1,1V9.5L11.225,7.553a.5.5,0,0,0-.577.093l-3.71,3.71L4.278,9.584a.5.5,0,0,0-.63.062L1,12V3A1,1,0,0,1,2,2Z" fill="#b4b4b4"/>
+      </g>
+    </g>
+    <g id="Group_5" data-name="Group 5" transform="translate(-29)">
+      <rect id="region-content-6" data-name="region-content" width="27" height="30" rx="2" transform="translate(31 36)" fill="#ebebeb"/>
+      <g id="Group_4" data-name="Group 4" transform="translate(36.998 43)">
+        <path id="Path_1-2" data-name="Path 1" d="M6,5.5A1.5,1.5,0,1,1,4.5,4,1.5,1.5,0,0,1,6,5.5" fill="#b4b4b4"/>
+        <path id="Path_2-2" data-name="Path 2" d="M2,1A2,2,0,0,0,0,3V13a2,2,0,0,0,2,2H14a2,2,0,0,0,2-2V3a2,2,0,0,0-2-2ZM14,2a1,1,0,0,1,1,1V9.5L11.225,7.553a.5.5,0,0,0-.577.093l-3.71,3.71L4.278,9.584a.5.5,0,0,0-.63.062L1,12V3A1,1,0,0,1,2,2Z" fill="#b4b4b4"/>
+      </g>
+    </g>
+    <g id="Group_7" data-name="Group 7">
+      <rect id="region-content-7" data-name="region-content" width="56" height="14" rx="2" transform="translate(62 2)" fill="#ebebeb"/>
+      <g id="Group_2" data-name="Group 2" transform="translate(83.998 3)">
+        <path id="Path_1-3" data-name="Path 1" d="M5.145,5.071A1.071,1.071,0,1,1,4.073,4,1.071,1.071,0,0,1,5.145,5.071" transform="translate(-0.857 -0.857)" fill="#b4b4b4"/>
+        <path id="Path_2-3" data-name="Path 2" d="M1.431,1A1.429,1.429,0,0,0,0,2.429V9.571A1.429,1.429,0,0,0,1.431,11H10a1.429,1.429,0,0,0,1.429-1.429V2.429A1.429,1.429,0,0,0,10,1ZM10,1.714a.714.714,0,0,1,.714.714V7.071l-2.7-1.391a.357.357,0,0,0-.412.066L4.956,8.4l-1.9-1.266a.357.357,0,0,0-.45.044L.716,8.857V2.429a.714.714,0,0,1,.714-.714Z" fill="#b4b4b4"/>
+      </g>
+    </g>
+    <g id="Group_8" data-name="Group 8">
+      <rect id="region-content-8" data-name="region-content" width="56" height="14" rx="2" transform="translate(2 2)" fill="#ebebeb"/>
+      <g id="Group_3" data-name="Group 3" transform="translate(23.998 3)">
+        <path id="Path_1-4" data-name="Path 1" d="M5.145,5.071A1.071,1.071,0,1,1,4.073,4,1.071,1.071,0,0,1,5.145,5.071" transform="translate(-0.857 -0.857)" fill="#b4b4b4"/>
+        <path id="Path_2-4" data-name="Path 2" d="M1.431,1A1.429,1.429,0,0,0,0,2.429V9.571A1.429,1.429,0,0,0,1.431,11H10a1.429,1.429,0,0,0,1.429-1.429V2.429A1.429,1.429,0,0,0,10,1ZM10,1.714a.714.714,0,0,1,.714.714V7.071l-2.7-1.391a.357.357,0,0,0-.412.066L4.956,8.4l-1.9-1.266a.357.357,0,0,0-.45.044L.716,8.857V2.429a.714.714,0,0,1,.714-.714Z" fill="#b4b4b4"/>
+      </g>
+    </g>
+  </g>
+</svg>
